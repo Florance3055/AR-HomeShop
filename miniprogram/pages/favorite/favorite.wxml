@@ -1,0 +1,19 @@
+<!-- favorite.wxml -->
+<view class="container">
+  <!-- 收藏为0时页面 -->
+  <view vx:if="{{favoriteSum==0}}">
+    <view class="image-class">
+      <van-image radius="20px" width="100vw" height="100px" fit="contain" src="../../icons/favorite/favorite.png" />
+    </view>
+
+    <view class="font-class">
+      <text>您还没有收藏哦，快去看看喜欢什么吧~</text>
+    </view>
+
+    <!-- 跳转按钮 -->
+    <view class="view-class1">
+      <van-button bind:click="toCategory" custom-class="button-class" color="#937467" round type="info">去看看</van-button>
+    </view>
+  </view>
+
+</view>

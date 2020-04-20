@@ -1,0 +1,61 @@
+/**index.wxss**/
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.search-class {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+}
+
+.search-class .icon-class {
+  margin-left: 10px;
+}
+
+.search-class .field-class {
+  width: 65vw !important;
+}
+
+.image-class {
+  margin-top: 10px;
+}
+
+.work1 {
+  margin-top: 10px;
+  height: 350rpx;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+}
+
+.font1 {
+  font-size: 25rpx;
+  margin-top: 10px;
+}
+
+.image-cell {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+}
+
+.font-title {
+  font-weight: bold;
+}
+
+.view1 {
+  margin-top: 3px;
+  width: 100vw;
+  height: 200px;
+}

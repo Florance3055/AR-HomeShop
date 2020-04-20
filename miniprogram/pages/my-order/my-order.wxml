@@ -1,0 +1,121 @@
+<!-- my-order.wxml -->
+<view class="container">
+
+  <!-- 顶部导航栏 -->
+  <van-tabs color="#937467" sticky animated swipeable active="{{ active }}">
+    <van-tab title="全部">
+
+      <!-- 订单列表 -->
+      <view class="image-class" wx:for="{{allorder}}" wx:key="index">
+        <view class="view-class1">
+          <van-cell-group>
+            <van-cell value-class="cell-class1" value="{{item.msg}}" />
+            <van-cell title-width="70%" value-class="cell-class4" custom-class="cell-class2" is-link value="共计{{item.product.length}}件商品" arrow-direction="">
+              <view class="" slot="title">
+                <van-image wx:for="{{item.product}}" wx:key="index" wx:for-item="items" width="17vw" height="10vh" fit="contain" src="{{items.img}}" />
+              </view>
+            </van-cell>
+            <van-cell title="共{{item.product.length}}件商品" value-class="cell-class3" title-width="40%" value="合计:￥{{item.allprice}}（含运费{{item.express}}）" />
+            <van-cell wx:if="{{!item.payStatus}}" title-width="30%">
+              <view slot="">
+                <van-button custom-class="button-class1" size="small" color="#000000" plain round>取消订单</van-button>
+                <van-button size="small" color="#937467" round plain>付款</van-button>
+              </view>
+            </van-cell>
+          </van-cell-group>
+        </view>
+      </view>
+    </van-tab>
+
+    <van-tab title="待付款">
+      <view class="image-class" wx:for="{{allstay}}" wx:key="index">
+        <view class="view-class1">
+          <van-cell-group>
+            <van-cell value-class="cell-class1" value="{{item.msg}}" />
+            <van-cell title-width="70%" value-class="cell-class4" custom-class="cell-class2" is-link value="共计{{item.product.length}}件商品" arrow-direction="">
+              <view class="" slot="title">
+                <van-image wx:for="{{item.product}}" wx:key="index" wx:for-item="items" width="17vw" height="10vh" fit="contain" src="{{items.img}}" />
+              </view>
+            </van-cell>
+            <van-cell title="共{{item.product.length}}件商品" value-class="cell-class3" title-width="40%" value="合计:￥{{item.allprice}}（含运费{{item.express}}）" />
+            <van-cell wx:if="{{!item.payStatus}}" title-width="30%">
+              <view slot="">
+                <van-button custom-class="button-class1" size="small" color="#000000" plain round>取消订单</van-button>
+                <van-button size="small" color="#937467" round plain>付款</van-button>
+              </view>
+            </van-cell>
+          </van-cell-group>
+        </view>
+      </view>
+    </van-tab>
+
+    <van-tab title="待收货">
+      <view class="image-class" wx:for="{{allpay}}" wx:key="index">
+        <view class="view-class1">
+          <van-cell-group>
+            <van-cell value-class="cell-class1" value="{{item.msg}}" />
+            <van-cell title-width="70%" value-class="cell-class4" custom-class="cell-class2" is-link value="共计{{item.product.length}}件商品" arrow-direction="">
+              <view class="" slot="title">
+                <van-image wx:for="{{item.product}}" wx:key="index" wx:for-item="items" width="17vw" height="10vh" fit="contain" src="{{items.img}}" />
+              </view>
+            </van-cell>
+            <van-cell title="共{{item.product.length}}件商品" value-class="cell-class3" title-width="40%" value="合计:￥{{item.allprice}}（含运费{{item.express}}）" />
+            <van-cell wx:if="{{!item.payStatus}}" title-width="30%">
+              <view slot="">
+                <van-button custom-class="button-class1" size="small" color="#000000" plain round>取消订单</van-button>
+                <van-button size="small" color="#937467" round plain>付款</van-button>
+              </view>
+            </van-cell>
+          </van-cell-group>
+        </view>
+      </view>
+    </van-tab>
+
+    <van-tab title="已完成">
+      <view class="image-class" wx:for="{{allfinish}}" wx:key="index">
+        <view class="view-class1">
+          <van-cell-group>
+            <van-cell value-class="cell-class1" value="{{item.msg}}" />
+            <van-cell title-width="70%" value-class="cell-class4" custom-class="cell-class2" is-link value="共计{{item.product.length}}件商品" arrow-direction="">
+              <view class="" slot="title">
+                <van-image wx:for="{{item.product}}" wx:key="index" wx:for-item="items" width="17vw" height="10vh" fit="contain" src="{{items.img}}" />
+              </view>
+            </van-cell>
+            <van-cell title="共{{item.product.length}}件商品" value-class="cell-class3" title-width="40%" value="合计:￥{{item.allprice}}（含运费{{item.express}}）" />
+            <van-cell wx:if="{{!item.payStatus}}" title-width="30%">
+              <view slot="">
+                <van-button custom-class="button-class1" size="small" color="#000000" plain round>取消订单</van-button>
+                <van-button size="small" color="#937467" round plain>付款</van-button>
+              </view>
+            </van-cell>
+          </van-cell-group>
+        </view>
+      </view>
+    </van-tab>
+
+    <van-tab title="已取消">
+      <view class="image-class" wx:for="{{allcancel}}" wx:key="index">
+        <view class="view-class1">
+          <van-cell-group>
+            <van-cell value-class="cell-class1" value="{{item.msg}}" />
+            <van-cell title-width="70%" value-class="cell-class4" custom-class="cell-class2" is-link value="共计{{item.product.length}}件商品" arrow-direction="">
+              <view class="" slot="title">
+                <van-image wx:for="{{item.product}}" wx:key="index" wx:for-item="items" width="17vw" height="10vh" fit="contain" src="{{items.img}}" />
+              </view>
+            </van-cell>
+            <van-cell title="共{{item.product.length}}件商品" value-class="cell-class3" title-width="40%" value="合计:￥{{item.allprice}}（含运费{{item.express}}）" />
+            <van-cell wx:if="{{!item.payStatus}}" title-width="30%">
+              <view slot="">
+                <van-button custom-class="button-class1" size="small" color="#000000" plain round>取消订单</van-button>
+                <van-button size="small" color="#937467" round plain>付款</van-button>
+              </view>
+            </van-cell>
+          </van-cell-group>
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+
+
+
+</view>

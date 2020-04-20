@@ -1,0 +1,19 @@
+<!-- security.wxml -->
+<view class="container">
+
+  <!-- 手机号码输入弹窗 -->
+  <van-dialog use-slot title="更换手机号" show="{{ showPhone }}" show-cancel-button bind:close="onClosePhone" cancelButtonText="取消" bind:confirm="onConfirmPhone">
+    <van-cell-group>
+      <van-field value="{{patchPhone}}" required bind:change="changePhone" clearable label="新的手机号" placeholder="请输入手机号码" border="{{ false }}" />
+    </van-cell-group>
+  </van-dialog>
+
+  <!-- 信息列表 -->
+  <view class="view1">
+    <van-cell-group>
+      <van-cell center label="{{phone}}" clickable title="绑定手机" is-link value="更换手机号" arrow-direction="" bind:click="onShowPhone" />
+      <van-cell clickable title="设置登录密码" is-link arrow-direction="" />
+      <van-cell clickable title="设置提现密码" is-link arrow-direction="" />
+    </van-cell-group>
+  </view>
+</view>

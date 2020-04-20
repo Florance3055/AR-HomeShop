@@ -1,0 +1,28 @@
+<!-- shop.wxml -->
+<view class="card-height">
+
+  <!-- 商品列表 -->
+  <van-checkbox-group value="{{result}}" bind:change="onChange">
+    <van-cell-group class="">
+      <van-cell wx:for="{{content.length}}" wx:key="index" custom-class="cell-class" title-class="value-class" data-index="{{ index }}" bind:click="toDetail" data-name="{{content[index].name}}" data-price="{{content[index].price}}" data-detail="{{content[index].detail}}"
+        data-icon="{{content[index].icon}}" clickable center>
+        <van-card desc="{{content[index].detail}}" title="{{content[index].name}}" data-name="{{content[index].name}}" custom-class="card-class" title-class="title-class" desc-class="title-class" thumb="{{content[index].icon}}">
+          <view slot="num">
+            <van-stepper data-name="{{content[index].name}}" disable-input="true" value="{{content[index].num}}" catch:tap="noop" bind:change="numChange" integer="true" input-class="input-class" input-width="30px" button-size="20px" data-cells="{{ index }}" />
+          </view>
+          <text slot="price" class="price-class">¥{{content[index].price}}</text>
+        </van-card>
+        <view slot="title">
+          <van-checkbox catch:tap="noop" shape="square" checked-color="#937467" class="checkboxes-{{ index }}" name="{{ item }}" />
+        </view>
+      </van-cell>
+    </van-cell-group>
+  </van-checkbox-group>
+
+  <!-- 底部导航栏 -->
+  <van-submit-bar button-class="button-class" price-class="price-class" price="{{allprice*100}}" safe-area-inset-bottom="true" button-text="提交订单" bind:submit="onClickButton">
+    <van-checkbox custom-class="text-class" value="{{checkedall}}" shape="square" checked-color="#937467" bind:change="checkAll" solt="">
+      <text class="text-calss">全选</text>
+    </van-checkbox>
+  </van-submit-bar>
+</view>

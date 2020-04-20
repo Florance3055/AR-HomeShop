@@ -1,0 +1,28 @@
+<!-- check-order.wxml -->
+<view class="container">
+
+  <!-- 收件人信息栏 -->
+  <view class="view-class1">
+    <van-cell use-label-slot icon="../../icons/dizhi.png" title="收件人：{{user_info.nickName}}" is-link value="邮编：{{user_info.postcode}}" size="large" arrow-direction="">
+      <view class="label-class" slot="label">
+        <text>收件地址：{{user_info.address}}</text>
+      </view>
+    </van-cell>
+    <image style="width:100%; height:10px;" src="../../icons/hengxian.png" />
+  </view>
+
+  <!-- 订单详情列表 -->
+  <view class="view-class2" wx:for="{{content.length}}" wx:key="index">
+    <van-card price-class="price-class" num="{{content[index].num}}" price="{{content[index].price}}" desc="{{content[index].detail}}" title="{{content[index].name}}" thumb="{{content[index].icon}}" />
+    <van-cell-group>
+      <van-cell title="配送方式" value="{{content[index].delivery||delivery}}" />
+      <van-cell title="优惠券" is-link value="{{content[index].coupon||coupon}}" arrow-direction="" />
+      <van-cell title="运费" value="￥{{content[index].freight||freight}}" />
+      <van-cell title="留言" value="选填:请留下你的要求" />
+      <van-cell title="共{{content[index].num}}件商品" value="小计:￥{{content[index].price*content[index].num}}" />
+    </van-cell-group>
+  </view>
+
+  <!-- 提交订单按钮 -->
+  <van-submit-bar button-class="button-class" price-class="price-class" price="{{allprice*100}}" safe-area-inset-bottom="true" button-text="点击支付" bind:tap="checkMoneyEnough"></van-submit-bar>
+</view>

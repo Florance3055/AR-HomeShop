@@ -1,0 +1,13 @@
+/**red-packet.wxss**/
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.image-class {
+  margin-top: 20px;
+}

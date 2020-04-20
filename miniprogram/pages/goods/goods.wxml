@@ -1,0 +1,14 @@
+<!-- good.wxml -->
+<view class="container">
+
+  <!-- 商品列表 -->
+  <view class="view-class">
+    <van-grid border="{{ false }}" column-num="2" center="false" gutter="{{ 10 }}" clickable>
+      <van-grid-item data-name="{{item.name}}" data-price="{{item.price}}" data-detail="{{item.detail}}" data-icon="{{item.icon}}" bind:click="toDetail" text-class="title" center="false" custom-class="title" url="{{toUrl}}" use-slot wx:for="{{ product }}" wx:key="id">
+        <image class="image" src="{{item.icon}}" />
+        <text class="title">{{item.name}}</text>
+        <text class="price">¥{{item.price}}</text>
+      </van-grid-item>
+    </van-grid>
+  </view>
+</view>

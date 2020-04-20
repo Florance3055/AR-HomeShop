@@ -1,0 +1,35 @@
+<!-- payment.wxml -->
+<view class="container">
+
+	<view class="image-class">
+		<van-image radius="20px" width="100vw" height="100px" fit="contain" src="../../icons/chenggong.png" />
+	</view>
+
+	<view class="font-class1">
+		<text>支付成功！</text>
+		<!-- <text>下单成功，请尽快支付!</text> -->
+	</view>
+
+	<view class="font-class2">
+		<!-- <text>提示：请在10分钟内完成支付，否则订单会被取消</text> -->
+	</view>
+
+	<!-- 支付方式列表 -->
+	<!-- <view class="cell-class">
+    <text class="font-class3">选择支付方式</text>
+    <van-radio-group value="{{ radio }}" bind:change="onChange">
+      <van-cell-group>
+        <van-cell wx:for="{{pay}}" wx:key="index" custom-class="view1" clickable data-name="{{item.name}}" bind:click="onClick">
+          <view slot="title">
+            <van-image custom-class="image-class2" width="25%" height="18px" fit="fill" src="{{item.src}}" />
+          </view>
+          <van-radio slot="right-icon" name="{{item.name}}" checked-color="#937467" />
+        </van-cell>
+      </van-cell-group>
+    </van-radio-group>
+  </view> -->
+
+	<!-- 确认按钮 -->
+	<van-button custom-class="button-class" type="primary" color="#937467" block bind:tap="toCart">确认</van-button>
+	<!-- <van-button custom-class="button-class" type="primary" color="#937467" block>立即支付</van-button> -->
+</view>

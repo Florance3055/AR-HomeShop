@@ -1,0 +1,43 @@
+/**check-order.wxss**/
+
+page {
+  background: #f6f6f6;
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.view-class1 {
+  margin: 10px;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.view-class1 .label-class {
+  width: 120px;
+}
+
+.price-class {
+  color: #937467 !important;
+}
+
+.button-class {
+  border: none !important;
+  background: #937467 !important;
+  border-radius: 0 !important;
+}
+
+.view-class2 {
+  margin: 10px;
+  background: #fff;
+  margin-bottom: 50px;
+}
+
+.cell-class {
+  margin-top: 10px;
+  height: 120px;
+  background: #fff !important;
+}

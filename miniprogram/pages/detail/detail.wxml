@@ -1,0 +1,57 @@
+<!-- detail.wxml -->
+<view class="container">
+
+  <!-- 商品轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 商品详情 -->
+  <scroll-view scroll-y="true" class="background">
+    <view class="detail">
+      <view class="title">
+        <text>{{name}}</text>
+        <van-icon size="18px" class="icon-class2" color="black" name="{{arIcon}}" />
+        <van-icon size="18px" class="icon-class1" color="black" name="{{shareIcon}}" />
+      </view>
+      <text class="price">￥{{price}}</text>
+    </view>
+    <view class="van-class">
+      <view wx:for="{{icons}}" wx:key="index" class="view-class">
+        <van-icon style="margin-right: 3px;" size="10px" name="{{iconUrl}}" />
+        <text>{{item}}</text>
+      </view>
+    </view>
+    <view class="view-class2">
+      <text>型号：{{size}}</text>
+    </view>
+    <view class="view-class2">
+      <text>参数：{{detail}}</text>
+    </view>
+    <view class="view-class2">
+      <text>
+                活动：
+                <text class="font-orange">{{activity}}</text>
+      </text>
+    </view>
+    <van-divider hairline />
+    <text class="font1">商品详情</text>
+    <block wx:for-items="{{detailImg}}" wx:key="name">
+      <image class="image_detail" src="{{item}}" />
+    </block>
+    <view class="temp"></view>
+  </scroll-view>
+
+  <!-- 底部导航栏 -->
+  <van-goods-action>
+    <van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickIcon" />
+    <van-goods-action-icon icon="cart-o" text="购物车" bind:click="toShop" />
+    <van-goods-action-button class="button-class" color="#d27715" text="加入购物车" bind:tap="onClickButton1" />
+    <van-goods-action-button class="button-class" color="#937467" text="立即购买" bind:click="onClickButton2" />
+  </van-goods-action>
+
+</view>

@@ -1,0 +1,16 @@
+<!-- category.wxml -->
+<view class="container">
+
+  <!-- 左边导航栏 -->
+  <van-tree-select items="{{ items }}" height="100vh" main-item-class="class1" main-active-index="{{ mainActiveIndex }}" bind:click-nav="onClickNav" bind:click-item="onClickItem">
+    <!-- 右边商品列表 -->
+    <view class="class2" slot="content">
+      <van-grid border="{{ false }}" column-num="3">
+        <van-grid-item data-category="{{item.name}}" bind:click="toGoods" use-slot wx:for="{{ show }}" wx:key="index">
+          <image style="width: 100%; height:60px ;" src="{{item.image}}" />
+          <text class="font1">{{item.name}}</text>
+        </van-grid-item>
+      </van-grid>
+    </view>
+  </van-tree-select>
+</view>

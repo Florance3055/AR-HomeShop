@@ -1,0 +1,20 @@
+<!-- red-packet.wxml -->
+<view class="container">
+
+  <!-- 顶部导航栏 -->
+  <van-tabs color="#937467" sticky animated swipeable active="{{ active }}">
+    <van-tab title="可用">
+
+      <!-- 红包列表 -->
+      <view class="image-class" wx:for="{{available}}" wx:key="index">
+        <van-image radius="20px" width="100vw" height="100px" fit="contain" src="{{item.url}}" />
+      </view>
+    </van-tab>
+
+    <van-tab title="不可用">
+      <view class="image-class" wx:for="{{disabled}}" wx:key="index">
+        <van-image radius="20px" width="100vw" height="100px" fit="contain" src="{{item.url}}" />
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>

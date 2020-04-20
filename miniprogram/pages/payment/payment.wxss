@@ -1,0 +1,55 @@
+/**payment.wxss**/
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.image-class {
+  margin-top: 20px;
+}
+
+.font-class1 {
+  margin: 10px;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+}
+
+.font-class2 {
+  margin: 10px;
+  color: gray;
+  font-size: 10px;
+  text-align: center;
+}
+
+.font-class3 {
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  margin: 10rpx;
+}
+
+.cell-class {
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.button-class {
+  width: 100% !important;
+  height: 10vh;
+  top: 10vh;
+}
+
+.image-class2 {
+  margin-top: 20x;
+}
+
+.view1 {
+  justify-content: right !important;
+  height: 8vh;
+}

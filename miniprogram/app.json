@@ -1,0 +1,107 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shop/shop",
+    "pages/my/my",
+    "pages/category/category",
+    "pages/payment/payment",
+    "pages/detail/detail",
+    "pages/goods/goods",
+    "pages/check-order/check-order",
+    "pages/red-packet/red-packet",
+    "pages/my-order/my-order",
+    "pages/gift/gift",
+    "pages/recharge/recharge",
+    "pages/my-info/my-info",
+    "pages/coupon/coupon",
+    "pages/bankcard/bankcard",
+    "pages/address/address",
+    "pages/favorite/favorite",
+    "pages/help/help",
+    "pages/security/security",
+    "pages/securitys/securitys"
+  ],
+  "subPackages": [
+    {
+      "root": "ar_package",
+      "pages": [
+        "pages/obj/index",
+        "pages/recognition/recognition"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "鸿舒",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "888888",
+    "selectedColor": "#937467",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/首页.png",
+        "selectedIconPath": "icons/首页2.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "icons/类目 品类 分类 类别.png",
+        "selectedIconPath": "icons/类目 品类 分类 类别.2.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "购物车",
+        "iconPath": "icons/购物车.png",
+        "selectedIconPath": "icons/购物车2.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "icons/我的.png",
+        "selectedIconPath": "icons/我的2.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "vant/button/index",
+    "van-tabbar": "vant/tabbar-item/index",
+    "van-sidebar": "vant/sidebar/index",
+    "van-sidebar-item": "vant/sidebar-item/index",
+    "van-tree-select": "vant/tree-select/index",
+    "van-grid": "vant/grid/index",
+    "van-grid-item": "vant/grid-item/index",
+    "van-card": "vant/card/index",
+    "van-submit-bar": "vant/submit-bar/index",
+    "van-checkbox": "vant/checkbox/index",
+    "van-checkbox-group": "vant/checkbox-group/index",
+    "van-radio": "vant/radio/index",
+    "van-radio-group": "vant/radio-group/index",
+    "van-stepper": "vant/stepper/index",
+    "van-cell": "vant/cell/index",
+    "van-cell-group": "vant/cell-group/index",
+    "van-search": "vant/search/index",
+    "van-icon": "vant/icon/index",
+    "van-toast": "vant/toast/index",
+    "van-image": "vant/image/index",
+    "van-dialog": "vant/dialog/index",
+    "van-field": "vant/field/index",
+    "van-goods-action": "vant/goods-action/index",
+    "van-goods-action-icon": "vant/goods-action-icon/index",
+    "van-goods-action-button": "vant/goods-action-button/index",
+    "van-divider": "vant/divider/index",
+    "van-row": "vant/row/index",
+    "van-col": "vant/col/index",
+    "van-tab": "vant/tab/index",
+    "van-tabs": "vant/tabs/index",
+    "van-panel": "vant/panel/index"
+  }
+}

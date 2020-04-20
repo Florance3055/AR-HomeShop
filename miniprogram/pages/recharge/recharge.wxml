@@ -1,0 +1,36 @@
+<!-- recharge.wxml -->
+<view class="container">
+
+  <!-- 充值金额列表 -->
+  <view class="payview">
+    <text class="font-class1">充值金额</text>
+    <van-grid column-num="2" border="{{ false }}">
+      <van-grid-item use-slot wx:for="{{ recharge }}" wx:key="index">
+        <van-button color="#937467" plain custom-class="{{index==clickid?'button-class2':'button-class1'}}" type="info" data-id="{{item.id}}" bind:click="clickPrice">
+          <view class="text-view">
+            <text class="{{index==clickid?'font-class2C':'font-class2'}}">{{item.title}}</text>
+            <text class="{{index==clickid?'font-class4C':'font-class4'}}">{{item.subtitle}}</text>
+          </view>
+        </van-button>
+      </van-grid-item>
+    </van-grid>
+  </view>
+
+  <!-- 支付方式列表 -->
+  <view class="cell-class">
+    <text class="font-class3">选择支付方式</text>
+    <van-radio-group value="{{ radio }}" bind:change="onChange">
+      <van-cell-group>
+        <van-cell wx:for="{{pay}}" wx:key="index" custom-class="view1" clickable data-name="{{item.name}}" bind:click="onClick">
+          <view slot="title">
+            <van-image custom-class="image-class2" width="25%" height="18px" fit="fill" src="{{item.src}}" />
+          </view>
+          <van-radio slot="right-icon" name="{{item.name}}" checked-color="#937467" />
+        </van-cell>
+      </van-cell-group>
+    </van-radio-group>
+  </view>
+
+  <!-- 确认按钮 -->
+  <van-submit-bar button-class="button-class3" decimal-length="0" price-class="price-class" price="{{newprice*100}}" safe-area-inset-bottom="true" button-text="确认充值" bind:submit="addUserMoney" />
+</view>

@@ -1,0 +1,49 @@
+/**address.wxss**/
+
+page {
+  background: #f6f6f6;
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.view-class1 {
+  background: #fff;
+  height: 30px;
+  text-align: right;
+}
+
+.text-class1 {
+  margin-right: 10vw;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #937467;
+}
+
+.view-class2 {
+  margin-top: 5px;
+  text-overflow: ellipsis !important;
+  white-space: pre-wrap !important;
+}
+
+.radio-class {
+  margin-top: 5px;
+  font-size: 12px;
+  width: 30vw;
+}
+
+.view-button {
+  width: 100%;
+  text-align: right !important;
+}
+
+.view-footer {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.button1 {
+  margin: 5px;
+}

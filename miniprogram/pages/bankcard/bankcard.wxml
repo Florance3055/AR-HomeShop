@@ -1,0 +1,15 @@
+<!-- bankcard.wxml -->
+<view class="container">
+
+  <!-- 银行卡列表 -->
+  <view wx:for="{{bankList}}" class="image1" wx:key="id">
+    <van-image radius="10" data-id="{{item.id}}" bind:click="onClick" width="90vw" fit="contain" height="{{item.id == nowId ? '140px' : '70px'}}" src="{{item.id == nowId ? item.image : item.image1}}" />
+  </view>
+
+  <!-- 添加银行卡按钮 -->
+  <view class="view-class1">
+    <van-button bind:click="toCategory" custom-class="button-class" color="#ffffff" block>
+      +添加银行卡
+    </van-button>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<!-- help.wxml -->
+<view class="container">
+
+  <!-- 流程指引栏 -->
+  <view class="view1">
+    <van-cell-group>
+      <van-cell custom-class="cell-class" title="流程指引" is-link arrow-direction="up" />
+      <van-cell title-class="title-class" clickable title="购买流程" is-link arrow-direction="" />
+      <van-cell title-class="title-class" clickable title="AR使用" is-link arrow-direction="" />
+      <van-cell title-class="title-class" clickable title="充值提现" is-link arrow-direction="" />
+    </van-cell-group>
+  </view>
+
+  <!-- 常见问题栏 -->
+  <view class="view1">
+    <van-cell-group>
+      <van-cell custom-class="cell-class" title="常见问题" is-link arrow-direction="up" />
+      <van-cell title-class="title-class" clickable title="问题一：多久才能收到货？" is-link arrow-direction="" />
+      <van-cell title-class="title-class" clickable title="问题二：保修期多久？" is-link arrow-direction="" />
+      <van-cell title-class="title-class" clickable title="问题三：系统支持的充值渠道有哪些？" is-link arrow-direction="" />
+    </van-cell-group>
+  </view>
+
+</view>

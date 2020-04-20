@@ -1,0 +1,125 @@
+<!--my.wxml-->
+
+<view class="container">
+
+  <!-- 用户信息栏 -->
+  <van-dialog id="van-dialog" />
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取微信权限 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <van-button color="#937467" plain size="mini"  bind:click="toMyInfo">个人信息</van-button>
+    </block>
+  </view>
+
+  <!-- 订单信息栏 -->
+  <view class="work1">
+    <van-grid border="{{ false }}" column-num="5" slot="content">
+      <van-grid-item use-slot wx:for="{{ workicon1 }}" wx:key="index" data-active="{{item.active}}" bind:click="{{item.click}}">
+        <image style="width: 50%; height:25px ;" src="{{item.icon}}" />
+        <text class="font2">{{item.name}}</text>
+      </van-grid-item>
+    </van-grid>
+    <van-grid border="{{ false }}" column-num="4" slot="content">
+      <van-grid-item use-slot wx:for="{{ workicon3 }}" wx:key="index" bind:click="{{item.click}}">
+        <image style="width: 40%; height:30px ;" src="{{item.icon}}" wx:if="{{index==3}}" />
+        <text class="font3" style="height:30px ;" wx:if="{{index<3}}">{{item.num}}</text>
+        <text class="font2">{{item.name}}</text>
+      </van-grid-item>
+    </van-grid>
+  </view>
+
+  <!-- 工具栏 -->
+  <view class="work2">
+    <text class="font1">工具栏</text>
+    <van-grid border="{{ false }}" column-num="4" slot="content">
+      <van-grid-item use-slot wx:for="{{ workicon2 }}" wx:key="index" bind:click="{{item.click}}">
+        <image style="width: 40%; height:30px ;" src="{{item.icon}}" />
+        <text class="font2">{{item.name}}</text>
+      </van-grid-item>
+    </van-grid>
+  </view>
+</view>
+
+
+<!-- <van-dialog
+      use-slot
+      title="完善信息"
+      show="{{ showAddress }}"
+      show-cancel-button
+      bind:close="onCloseAddress"
+      cancelButtonText="暂不填写"
+      bind:confirm="onConfirmAddress"
+      >
+      <van-cell-group>
+        <van-field
+        value="{{ phone }}"
+        bind:change="changePhone"
+        required
+        clearable
+        label="手机号码"
+        placeholder="请输入手机号"
+        />
+
+        <van-field
+        value="{{ address }}"
+        required
+        bind:change="changeAddress"
+        clearable
+        label="收货地址"
+        placeholder="请输入收货地址"
+        border="{{ false }}"
+        />
+        <van-field
+        value="{{ money }}"
+        required
+        bind:change="changeMoney"
+        clearable
+        label="充值金额"
+        placeholder="请输入充值金额"
+        border="{{ false }}"
+        />
+      </van-cell-group>
+      </van-dialog>
+
+      <van-dialog
+      use-slot
+      title="充值"
+      show="{{ showMoney }}"
+      show-cancel-button
+      bind:close="onCloseMoney"
+      cancelButtonText="取消"
+      bind:confirm="onConfirmMoney"
+      >
+      <van-cell-group>
+        <van-field
+        value="{{ money }}"
+        required
+        bind:change="changeMoney"
+        clearable
+        label="充值金额"
+        placeholder="请输入充值金额"
+        border="{{ false }}"
+        />
+      </van-cell-group>
+      </van-dialog> -->
+
+
+
+
+<!--
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      size="default"
+      
+    >
+    </button>
+    <view class="userinfo-nickname-wrapper">
+      <button class="userinfo-nickname">用户名</button>
+    </view>
+  </view> -->

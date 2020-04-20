@@ -1,0 +1,45 @@
+<!-- index.wxml -->
+<view class="container">
+
+  <!-- Toast组件 -->
+  <van-toast id="van-toast" />
+
+  <!-- 搜索栏 -->
+  <view class="search-class">
+    <van-icon class="icon-class" name="../../icons/ar.png" size="30px" bind:tap="toRecognition" />
+    <van-search field-class="field-class" value="{{ value }}" placeholder="请输入搜索关键词" show-action="true" bind:change="onChange" bind:search="onSearch">
+    </van-search>
+  </view>
+
+  <!-- 首页展示图 -->
+  <view class="image-class">
+    <van-image radius="20px" width="100vw" height="150px" fit="contain" src="../../icons/banner.png" />
+  </view>
+
+  <!-- 分类列表项 -->
+  <view class="work1">
+    <van-grid border="{{ false }}" column-num="4" slot="content">
+      <van-grid-item data-category="{{item.name}}" bind:click="toGoods" border="false" use-slot wx:for="{{ icons }}" wx:key="index">
+        <image style="width: 50%; height:30px ;" src="{{item.icon}}" />
+        <text class="font1">{{item.name}}</text>
+      </van-grid-item>
+    </van-grid>
+  </view>
+
+  <!-- 优惠区 -->
+  <view class="image-class">
+    <van-image radius="20px" width="100vw" height="100px" fit="contain" src="../../icons/SYyouhui.png" />
+  </view>
+
+  <!-- 明星系列专区 -->
+  <view class="image-cell">
+    <van-cell title="明星系列" class="font-title">
+    </van-cell>
+    <view class="view1" wx:for="{{content}}" wx:key="index">
+      <van-image width="100vw" height="150px" fit="fill" src="{{item.image}}" />
+      <van-cell title="{{item.name}}" icon="arrow-up">
+      </van-cell>
+    </view>
+  </view>
+
+</view>

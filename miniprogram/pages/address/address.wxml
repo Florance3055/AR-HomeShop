@@ -1,0 +1,25 @@
+<!-- address.wxml -->
+<view class="container">
+
+  <!-- 页面顶部 -->
+  <view class="view-class1">
+    <text class="text-class1">添加地址</text>
+  </view>
+
+  <!-- 地址列表 -->
+  <van-radio-group value="{{ defaultID }}" bind:change="onChange">
+    <view class="view-class2" wx:for="{{addressList}}" wx:key="id">
+      <image style="width:100%; height:10px;" src="../../icons/address/hengxian.png" />
+      <van-panel title="{{item.name+'       '+item.phone}}" desc="{{item.address}}" status="" use-footer-slot>
+        <view class="view-footer" slot="footer">
+          <van-radio icon-size="15px" custom-class="radio-class" checked-color="#937467" name="{{item.id}}">默认地址</van-radio>
+          <view class="view-button">
+            <van-button custom-class='button1' icon="../../icons/address/bianji.png" size="mini">编辑</van-button>
+            <van-button icon="../../icons/address/shanchu.png" size="mini" data-id="{{index}}" bind:click="toDelete">删除</van-button>
+          </view>
+        </view>
+      </van-panel>
+    </view>
+  </van-radio-group>
+
+</view>

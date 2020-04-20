@@ -1,0 +1,156 @@
+/**detail.wxss**/
+
+page {
+  background: #f6f6f6;
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* 直接设置swiper属性 */
+
+swiper {
+  height: 500rpx;
+}
+
+swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.background {
+  background-color: #fff;
+}
+
+.detail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 0rpx;
+  background-color: #fff;
+}
+
+.detail .title {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  margin: 5px;
+  color: black;
+  text-align: justify;
+}
+
+.detail .title .icon-class1 {
+  position: absolute;
+  right: 20px;
+}
+
+.detail .title .icon-class2 {
+  position: absolute;
+  right: 50px;
+}
+
+.detail .price {
+  color: #937467;
+  font-size: 30rpx;
+  margin: 10rpx;
+}
+
+.line_flag {
+  width: 80rpx;
+  height: 1rpx;
+  display: inline-block;
+  margin: 20rpx auto;
+  background-color: #fff;
+  text-align: center;
+}
+
+.line {
+  width: 100%;
+  height: 2rpx;
+  display: inline-block;
+  margin: 20rpx 0rpx;
+  background-color: #fff;
+  text-align: center;
+}
+
+.image_detail {
+  width: 100%;
+}
+
+/* button {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30rpx;
+    border-radius: 0rpx;
+    width: 50%;
+    height: 100%;
+    line-height: 100rpx;
+} */
+
+.detail-nav image {
+  width: 70rpx;
+  height: 50rpx;
+  margin: 20rpx 40rpx;
+}
+
+.line_nav {
+  width: 5rpx;
+  height: 100%;
+  background-color: #fff;
+}
+
+/* 占位 */
+
+.temp {
+  height: 100rpx;
+}
+
+.font1 {
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  margin: 5px;
+  background-color: #fff;
+}
+
+.text-remark {
+  display: block;
+  font-size: 25rpx;
+  margin: 10rpx;
+}
+
+.van-class {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.view-class {
+  color: gray;
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+.view-class2 {
+  color: gray;
+  font-size: 13px;
+  margin-right: 5px;
+  margin: 10px;
+}
+
+.button-class {
+  font-size: 10px !important;
+  font-weight: 100 !important;
+  width: 20vw !important;
+}
+
+.font-orange {
+  color: orange;
+}

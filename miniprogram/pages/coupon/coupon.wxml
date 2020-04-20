@@ -1,0 +1,26 @@
+<!-- coupon.wxml -->
+<view class="container">
+
+  <!-- 顶部导航栏 -->
+  <van-tabs color="#937467" sticky animated swipeable active="{{ active }}">
+
+    <van-tab title="未使用">
+      <!-- 优惠券列表 -->
+      <view class="image-class" wx:for="{{unused}}" wx:key="id">
+        <van-image radius="20px" width="90vw" height="100px" fit="contain" src="{{item.url}}" />
+      </view>
+    </van-tab>
+
+    <van-tab title="已使用">
+      <view class="image-class" wx:for="{{used}}" wx:key="id">
+        <van-image radius="20px" width="90vw" height="100px" fit="contain" src="{{item.url}}" />
+      </view>
+    </van-tab>
+
+    <van-tab title="已过期">
+      <view class="image-class" wx:for="{{expired}}" wx:key="id">
+        <van-image radius="20px" width="90vw" height="100px" fit="contain" src="{{item.url}}" />
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>

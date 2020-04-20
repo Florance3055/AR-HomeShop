@@ -1,0 +1,56 @@
+/**shop.wxss**/
+
+page {
+  background: #f6f6f6;
+}
+
+.value-class {
+  flex: none !important;
+  margin-right: 10px;
+}
+
+.card-height {
+  margin-bottom: 100px;
+}
+
+.title-class {
+  text-align: left;
+}
+
+.cell-class {
+  margin-top: 10px;
+  height: 120px;
+  background: #fff !important;
+}
+
+.card-class {
+  background: #fff !important;
+}
+
+.price-class {
+  color: #000 !important;
+  font-size: 10px !important;
+}
+
+.button-class {
+  margin-right: 5px;
+  margin-left: 5px;
+  border: none !important;
+  background: #937467 !important;
+  border-radius: 1 !important;
+  height: 6vh !important;
+  width: 28vw !important;
+  font-size: 12px;
+}
+
+.text-class {
+  margin-top: 4px;
+  font-size: 12px;
+  width: 100%;
+  justify-content: left !important;
+  text-align: left !important;
+}
+
+.input-class {
+  color: #000 !important;
+}
